@@ -1,9 +1,11 @@
 package com.example;
 
 public class Book {
+    // This class stores the information of a book, this book can have a title & a publication date
     private String title;
     private int year;
 
+    // This constructor initializes the first instance of the Book class, representing a book.
     public Book(String title, int year) {
         this.title = title;
         this.year = year;
@@ -19,7 +21,14 @@ public class Book {
 }
 
 class Main {
+    /* The class main functionalities are to create the books array, 
+       and to sort it using the Bubble Sort Algorithm, 
+       and providing a searching functionality using Binary Search */
     public static void main(String[] args) {
+        /* This is the main method, the starting point of the program.
+           This method creates an array of books, sorts it by year, 
+           and searches for a book by year using the Binary Search Algorithm.*/
+           
         // Initializing de books array!!!!!!!
         Book[] books = {
             new Book("Crime and Punishment", 1866),
@@ -69,6 +78,9 @@ class Main {
     }
 
     public static int binarySearch(Book[] books, int targetYear) {
+        /* this method allow for searching for an element in the array 
+           with a time complexity of O(log(n)).
+           This method works only if the array is sorted! */
         int left = 0;
         int right = books.length - 1;
 
